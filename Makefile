@@ -26,6 +26,9 @@ bike-demo-test: $(SRC) *.h tests/test.c
 bike-nist-kat: $(SRC) *.h FromNIST/*.h FromNIST/PQCgenKAT_kem.c
 	$(CC) $(CFLAGS) FromNIST/PQCgenKAT_kem.c $(SRC) $(INCLUDE) -DVERBOSE=$(VERBOSE) -DNIST_RAND=1 -o $@
 
+bike-random-kat: $(SRC) *.h FromNIST/*.h FromNIST/additionalRandomTesting.c
+	$(CC) $(CFLAGS) FromNIST/additionalRandomTesting.c $(SRC) $(INCLUDE) -DVERBOSE=$(VERBOSE) -DNIST_RAND=1 -o $@
+
 bike-encap-kat: $(SRC) *.h FromNIST/*.h FromNIST/additionalEncapsulationTesting.c
 	$(CC) $(CFLAGS) FromNIST/additionalEncapsulationTesting.c $(SRC) $(INCLUDE) -DVERBOSE=$(VERBOSE) -DNIST_RAND=1 -o $@
 

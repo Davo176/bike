@@ -1,3 +1,11 @@
+To construct additional tests
+go to defs.h and select what params you want
+run:
+make bike-random-kat
+make bike-encap-kat
+make bike-decap-kat
+This creates the binarys which you can execute
+
 
 Compilation Instructions
 ------------------------
