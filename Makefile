@@ -35,6 +35,15 @@ bike-encap-kat: $(SRC) *.h FromNIST/*.h FromNIST/additionalEncapsulationTesting.
 bike-decap-kat: $(SRC) *.h FromNIST/*.h FromNIST/additionalDecapsulationTesting.c
 	$(CC) $(CFLAGS) FromNIST/additionalDecapsulationTesting.c $(SRC) $(INCLUDE) -DVERBOSE=$(VERBOSE) -DNIST_RAND=1 -o $@
 
+createKeyPairs: $(SRC) *.h FromNIST/*.h FromNIST/createKeyPairs.c
+	$(CC) $(CFLAGS) FromNIST/createKeyPairs.c $(SRC) $(INCLUDE) -DVERBOSE=$(VERBOSE) -DNIST_RAND=1 -o $@
+
+createEncaps: $(SRC) *.h FromNIST/*.h FromNIST/createEncapsulations.c
+	$(CC) $(CFLAGS) FromNIST/createEncapsulations.c $(SRC) $(INCLUDE) -DVERBOSE=$(VERBOSE) -DNIST_RAND=1 -o $@
+
+checkDecaps: $(SRC) *.h FromNIST/*.h FromNIST/checkDecapsulations.c
+	$(CC) $(CFLAGS) FromNIST/checkDecapsulations.c $(SRC) $(INCLUDE) -DVERBOSE=$(VERBOSE) -DNIST_RAND=1 -o $@
+
 clean:
 	rm -f PQCkemKAT_*
 	rm -f bike*
