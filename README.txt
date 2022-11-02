@@ -6,13 +6,16 @@ make bike-random-kat
 make bike-encap-kat
 make bike-decap-kat
 This creates the binarys which you can execute
-additionally for interoperability testing, the three files:
-you can run:
+
+Additionally for interoperability testing
+Again: go to defs.h and select what params you want
+Then you can run:
 make createKeyPairs
 make createEncaps
 make checkDecaps
 Note that in these two files, you have to manually switch between
 reading from and writing to _java_ or _csharp_
+
 /FromNIST/createEncapsulations.c
 /FromNIST/checkDecapsulations.c
 
