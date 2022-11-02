@@ -1,5 +1,6 @@
 Will Davis:
 To construct additional tests
+First make sure you run the commands from compilation steps below.
 go to defs.h and select what params you want
 run:
 make bike-random-kat
